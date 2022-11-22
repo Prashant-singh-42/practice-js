@@ -6,7 +6,7 @@ function showMsg(){
 // showMsg()
 // alert(msg)//msg is in local scope of showMsg
 
-let sum = (a, b) => {
+function sum(a, b) {
     let res = a + b;
     return res
 }
