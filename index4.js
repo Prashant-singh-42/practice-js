@@ -37,3 +37,45 @@ let promise1 = new Promise(function(resolve, reject) {
   });
 
   //then and catch
+
+//   if only interested in the success part use .then clause
+//   if only interested in the error part use .then clause
+//   with two parameters first being null the second being the actuall error
+//   or simply use a .cache clause for just the errors
+
+let promise4 = new Promise(function(resolve,reject){
+    setTimeout(()=>resolve("done!", 1000));
+})
+
+// promise4.then(
+//     result=> alert(result),
+//     error => alert(error)
+// )
+
+// promise4.then(res=>alert(res)).catch(err=>alert(err))
+
+//finally 
+
+new Promise((resolve, reject) => {
+    setTimeout(() => reject( new Error("whoops")), 2000)
+})
+.finally(() => alert("Promise ready"))//finally can be used to alert when a promise is ready it does not have any arguments and passes the value it recieves form the promise to the next handeler 
+.then(result =>alert(result))
+.catch(error => alert(error))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
