@@ -1,13 +1,13 @@
-let user = {
+const user = {
     name: "jhon",
     age: 19
 }
 
-let key = "name";
+const key = "name";
 // alert(user.key)//results in undefined
 // alert(user[key])//use squre bracket notaion instead
 
-let MakeUser = (name, age) => {
+const MakeUser = (name, age) => {
     return (
         {
             name: name,
